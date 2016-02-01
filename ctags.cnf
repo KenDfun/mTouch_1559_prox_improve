@@ -1,2 +1,0 @@
---regex-C=/^[ \t]*#define ([A-Z_][A-Z0-9_]*)/\1/C,constant/
---C-kinds=-d

@@ -41,9 +41,7 @@
 
 #define MTOUCH_PROXIMITY                    0       /* Index of the proximity sensor */
 
-// #define MTOUCH_PROX_GAIN                    2
 #define MTOUCH_PROX_GAIN                    2
-// #define MTOUCH_PROX_SCALING                 6
 #define MTOUCH_PROX_SCALING                 6
 
 #define MTOUCH_PROX_ACTIVATE_THRESHOLD      100
@@ -59,7 +57,7 @@ typedef uint16_t       MTOUCH_PROXIMITY_t;
 typedef uint_least24_t MTOUCH_PROXIMITY_t;
 #elif   (MTOUCH_PROX_GAIN + 7) <= 32
 typedef uint32_t       MTOUCH_PROXIMITY_t;
-#endif
+#endif    
 
 void                MTOUCH_Proximity_Init       (void);
 void                MTOUCH_Proximity_Decode     (void);

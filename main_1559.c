@@ -68,20 +68,13 @@
 
 extern MTOUCH_SAMPLE_t MTOUCH_lastSample[MTOUCH_SENSORS];
 
-extern uint32_t             MTOUCH_prox_reading;
-extern uint32_t             MTOUCH_prox_baseline;
-extern uint32_t             MTOUCH_prox_filter;
-extern int32_t Debug_delta;
-
-
-
 void interrupt  ISR         (void);
 void            SYSTEM_Init (void);
 
 void main(void)
 {
     unsigned char odd=0;
-
+    
     SYSTEM_Init();
 
     #if defined(I2C_ENABLED)
@@ -111,21 +104,18 @@ void main(void)
         MTOUCH_Scan();                  /* Scan the sensors */
         LATAbits.LATA4 = 0;
         INTCONbits.TMR0IE = 1;
-
+        
         MTOUCH_Decode();                /* Process the new data */
 
         #if defined(DEBUG_UART)
         if(!((odd++)%8)){
         UART_SendSignedChar(MTOUCH_Proximity_Delta_Get());
-        UART_SendShortLong(MTOUCH_prox_filter);
-        UART_SendShortLong(MTOUCH_prox_reading);
-        UART_SendShortLong(MTOUCH_prox_baseline);
         UART_SendSignedChar(MTOUCH_Sensor_Delta_Get(0));
-        UART_SendSignedLong(Debug_delta);
+        UART_SendShortLong(MTOUCH_lastSample[0] );
         UART_SendShortLong(MTOUCH_Sensor_Reading_Get(0) );
         UART_SendShortLong(MTOUCH_Sensor_Baseline_Get(0));
 
-/*
+/* 
         UART_SendShortLong(MTOUCH_lastSample[2] );
         UART_SendShortLong(MTOUCH_Sensor_Reading_Get(2) );
         UART_SendShortLong(MTOUCH_Sensor_Baseline_Get(2));
