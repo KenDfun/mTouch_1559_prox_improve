@@ -169,4 +169,3 @@ typedef int8_t              MTOUCH_DELTA_t;
 #endif
 
 #endif	/* CONFIGURATION_H */
-

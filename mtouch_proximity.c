@@ -77,7 +77,7 @@ void MTOUCH_Proximity_Init(void)
     MTOUCH_prox_filter      = (uint32_t)0;
     MTOUCH_prox_state       = MTOUCH_STATE_released;
     MTOUCH_proximity_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_ACTIVATE_THRESHOLD;
-    MTOUCH_proximity_noise_threshold = (MTOUCH_DELTA_t)10;
+    MTOUCH_proximity_noise_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_NOISE_THRESHOLD;
     MTOUCH_proximity_scaling = (uint8_t)MTOUCH_PROX_SCALING;
 
     /*Initialize Median filter*/
@@ -154,23 +154,16 @@ static void MTOUCH_Proximity_StateMachine(void)
     MTOUCH_Proximity_Delta_Calculate();
     switch(MTOUCH_prox_state)
     {
-        /*
-         *
-         */
         case MTOUCH_STATE_initializing:
             MTOUCH_prox_state = MTOUCH_STATE_released;
             break;
 
-        /*
-         *
-         */
         case MTOUCH_STATE_released:
-            if(MTOUCH_Sensor_Delta_Get(0)>MTOUCH_proximity_noise_threshold)
+            if(MTOUCH_Sensor_Delta_Get(0)>MTOUCH_PROX_NOISE_THRESHOLD)
             {
               MTOUCH_prox_state = MTOUCH_STATE_noise;
-              MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
             }
-            else if (MTOUCH_Proximity_Delta_Get() > MTOUCH_proximity_threshold)
+            else if (MTOUCH_Proximity_Delta_Get() > MTOUCH_PROX_ACTIVATE_THRESHOLD)
             {
                 MTOUCH_prox_state = MTOUCH_STATE_pressed;
 
@@ -180,17 +173,13 @@ static void MTOUCH_Proximity_StateMachine(void)
             }
             break;
 
-        /*
-         *
-         */
         case MTOUCH_STATE_pressed:
-            if(MTOUCH_Sensor_Delta_Get(0)>MTOUCH_proximity_noise_threshold)
+            if(MTOUCH_Sensor_Delta_Get(0) > MTOUCH_PROX_NOISE_THRESHOLD)
             {
               MTOUCH_prox_state = MTOUCH_STATE_noise;
               MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
             }
-            else if (MTOUCH_Proximity_Delta_Get() < (MTOUCH_proximity_threshold>>1))
-            // else if (MTOUCH_Proximity_Delta_Get() < (MTOUCH_proximity_threshold))
+            else if (MTOUCH_Proximity_Delta_Get() < MTOUCH_PROX_DEACTIVATE_THRESHOLD)
             {
                 MTOUCH_prox_state = MTOUCH_STATE_released;
                 MTOUCH_prox_baseline = MTOUCH_prox_reading;
@@ -202,13 +191,18 @@ static void MTOUCH_Proximity_StateMachine(void)
             break;
 
         case MTOUCH_STATE_noise:
-          if(MTOUCH_Sensor_Delta_Get(0) < (MTOUCH_proximity_noise_threshold>>1))
+          if(MTOUCH_Sensor_Delta_Get(0) < MTOUCH_PROX_DENOISE_THRESHOLD)
           {
-            MTOUCH_prox_state = MTOUCH_STATE_released;
-            MTOUCH_prox_baseline = MTOUCH_prox_reading;
-            MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
+            MTOUCH_prox_state = MTOUCH_STATE_recover_wait;
           }
 
+          break;
+
+        case MTOUCH_STATE_recover_wait:
+          if(MTOUCH_Proximity_Delta_Get() < MTOUCH_PROX_DEACTIVATE_THRESHOLD){
+            MTOUCH_prox_state = MTOUCH_STATE_released;
+            MTOUCH_prox_baseline = MTOUCH_prox_reading;
+          }
           break;
 
         /*
@@ -233,7 +227,6 @@ static void MTOUCH_Proximity_Update(void)
 
     MTOUCH_prox_reading  -= MTOUCH_prox_reading >> MTOUCH_PROX_GAIN;
     MTOUCH_prox_reading  += median_filter(MTOUCH_Sensor_Reading_Get((uint8_t)MTOUCH_PROXIMITY));
-    //  MTOUCH_prox_reading  = median_filter(MTOUCH_Sensor_Reading_Get((uint8_t)MTOUCH_PROXIMITY));
 
     if (MTOUCH_prox_state!=MTOUCH_STATE_pressed){
       MTOUCH_prox_baseline = MTOUCH_Sensor_Baseline_Get((uint8_t)MTOUCH_PROXIMITY)<<MTOUCH_PROX_GAIN;
@@ -258,8 +251,8 @@ static void MTOUCH_Proximity_Update(void)
     }
 
     MTOUCH_prox_filter -= MTOUCH_prox_filter >> (uint8_t)MTOUCH_PROX_GAIN;
-    // MTOUCH_prox_filter += (uint32_t)delta;
-    MTOUCH_prox_filter = (uint32_t)delta;
+    MTOUCH_prox_filter += (uint32_t)delta;
+//    MTOUCH_prox_filter = (uint32_t)delta;
 
     if(MTOUCH_prox_state==MTOUCH_STATE_noise){
       MTOUCH_prox_filter=0;

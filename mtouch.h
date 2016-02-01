@@ -42,7 +42,8 @@ enum MTOUCH_STATE
     MTOUCH_STATE_initializing = 0,
     MTOUCH_STATE_released,
     MTOUCH_STATE_pressed,
-    MTOUCH_STATE_noise
+    MTOUCH_STATE_noise,
+    MTOUCH_STATE_recover_wait,
 };
 
 typedef struct
