@@ -55,7 +55,8 @@ extern void MTOUCH_CALLBACK_ProxActivated   (void);
 extern void MTOUCH_CALLBACK_ProxDeactivated (void);
 
 MTOUCH_DELTA_t       MTOUCH_proximity_threshold;
-uint8_t              MTOUCH_proximity_scaling;    
+MTOUCH_DELTA_t       MTOUCH_proximity_noise_threshold;
+uint8_t              MTOUCH_proximity_scaling;
 
 /* Local Prototypes */
 static void MTOUCH_Proximity_StateMachine   (void);
@@ -76,8 +77,9 @@ void MTOUCH_Proximity_Init(void)
     MTOUCH_prox_filter      = (uint32_t)0;
     MTOUCH_prox_state       = MTOUCH_STATE_released;
     MTOUCH_proximity_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_ACTIVATE_THRESHOLD;
+    MTOUCH_proximity_noise_threshold = (MTOUCH_DELTA_t)10;
     MTOUCH_proximity_scaling = (uint8_t)MTOUCH_PROX_SCALING;
-    
+
     /*Initialize Median filter*/
     for (uint8_t i=0;i<MTOUCH_MEDIAN_FILTER_TAP;i++)
     {
@@ -153,20 +155,25 @@ static void MTOUCH_Proximity_StateMachine(void)
     switch(MTOUCH_prox_state)
     {
         /*
-         * 
+         *
          */
         case MTOUCH_STATE_initializing:
             MTOUCH_prox_state = MTOUCH_STATE_released;
             break;
 
         /*
-         * 
+         *
          */
         case MTOUCH_STATE_released:
-            if (MTOUCH_Proximity_Delta_Get() > MTOUCH_proximity_threshold)
+            if(MTOUCH_Sensor_Delta_Get(0)>MTOUCH_proximity_noise_threshold)
+            {
+              MTOUCH_prox_state = MTOUCH_STATE_noise;
+              MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
+            }
+            else if (MTOUCH_Proximity_Delta_Get() > MTOUCH_proximity_threshold)
             {
                 MTOUCH_prox_state = MTOUCH_STATE_pressed;
-                
+
                 /*lint -e522*/
                 MTOUCH_CALLBACK_ProxActivated();  /* Do not care if this has no side effects. */
                 /*lint +e522*/
@@ -174,10 +181,16 @@ static void MTOUCH_Proximity_StateMachine(void)
             break;
 
         /*
-         * 
+         *
          */
         case MTOUCH_STATE_pressed:
-            if (MTOUCH_Proximity_Delta_Get() < (MTOUCH_proximity_threshold>>1))
+            if(MTOUCH_Sensor_Delta_Get(0)>MTOUCH_proximity_noise_threshold)
+            {
+              MTOUCH_prox_state = MTOUCH_STATE_noise;
+              MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
+            }
+            else if (MTOUCH_Proximity_Delta_Get() < (MTOUCH_proximity_threshold>>1))
+            // else if (MTOUCH_Proximity_Delta_Get() < (MTOUCH_proximity_threshold))
             {
                 MTOUCH_prox_state = MTOUCH_STATE_released;
                 MTOUCH_prox_baseline = MTOUCH_prox_reading;
@@ -187,6 +200,16 @@ static void MTOUCH_Proximity_StateMachine(void)
                 /*lint +e522*/
             }
             break;
+
+        case MTOUCH_STATE_noise:
+          if(MTOUCH_Sensor_Delta_Get(0) < (MTOUCH_proximity_noise_threshold>>1))
+          {
+            MTOUCH_prox_state = MTOUCH_STATE_released;
+            MTOUCH_prox_baseline = MTOUCH_prox_reading;
+            MTOUCH_CALLBACK_ProxDeactivated();    /* Do not care if this has no side effects. */
+          }
+
+          break;
 
         /*
          * We should never reach this point.
@@ -206,22 +229,41 @@ static void MTOUCH_Proximity_StateMachine(void)
 static void MTOUCH_Proximity_Update(void)
 {
     int32_t delta;
+    static int32_t LastDelta=0;
 
     MTOUCH_prox_reading  -= MTOUCH_prox_reading >> MTOUCH_PROX_GAIN;
-    MTOUCH_prox_reading  +=median_filter(MTOUCH_Sensor_Reading_Get((uint8_t)MTOUCH_PROXIMITY));
-    
-    MTOUCH_prox_baseline = MTOUCH_Sensor_Baseline_Get((uint8_t)MTOUCH_PROXIMITY)<<MTOUCH_PROX_GAIN;
+    MTOUCH_prox_reading  += median_filter(MTOUCH_Sensor_Reading_Get((uint8_t)MTOUCH_PROXIMITY));
+    //  MTOUCH_prox_reading  = median_filter(MTOUCH_Sensor_Reading_Get((uint8_t)MTOUCH_PROXIMITY));
+
+    if (MTOUCH_prox_state!=MTOUCH_STATE_pressed){
+      MTOUCH_prox_baseline = MTOUCH_Sensor_Baseline_Get((uint8_t)MTOUCH_PROXIMITY)<<MTOUCH_PROX_GAIN;
+    }
 
     delta = (int32_t)(MTOUCH_prox_reading - MTOUCH_prox_baseline);
 
+    if (MTOUCH_prox_state==MTOUCH_STATE_released){
+      LastDelta = delta;
+    }
+    else{
+      if(delta>LastDelta){
+        MTOUCH_prox_baseline+=(delta-LastDelta);
+      }
+    }
+
+
     /* Clipping the negative side of the delta values. */
     if (delta < (int32_t)0)
-    { 
+    {
         delta = (int32_t)0;
     }
 
     MTOUCH_prox_filter -= MTOUCH_prox_filter >> (uint8_t)MTOUCH_PROX_GAIN;
-    MTOUCH_prox_filter += (uint32_t)delta;
+    // MTOUCH_prox_filter += (uint32_t)delta;
+    MTOUCH_prox_filter = (uint32_t)delta;
+
+    if(MTOUCH_prox_state==MTOUCH_STATE_noise){
+      MTOUCH_prox_filter=0;
+    }
 
 }
 

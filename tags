@@ -1,0 +1,295 @@
+!_TAG_FILE_ENCODING	cp932	//
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_JP_AUTHOR	HIGASHI Hirohito	/Twitter: @h_east/
+!_TAG_PROGRAM_JP_URL	http://hp.vector.co.jp/authors/VA025040/	//
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8J2	//
+ADC_ADDCAP_MAX	.\configuration_1559.h	/^#define ADC_ADDCAP_MAX              7$/;"	C
+ADC_BITS	.\configuration.h	/^#define ADC_BITS                    16          \/* Left-aligned ADC result  *\/$/;"	C
+ADC_MAX_OUTPUT	.\configuration.h	/^#define ADC_MAX_OUTPUT                  ((uint24_t)65535)$/;"	C
+ADC_SENSOR0_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR0_ADCON0          0b00111001  \/* AN14 *\/$/;"	C
+ADC_SENSOR1_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR1_ADCON0          0b01101001  \/* AN26 *\/$/;"	C
+ADC_SENSOR2_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR2_ADCON0          0b01011101  \/* AN23 *\/$/;"	C
+ADC_SENSOR3_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR3_ADCON0          0b00110101  \/* AN13 *\/$/;"	C
+ADC_SENSOR4_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR4_ADCON0          0b00001001  \/* AN2  *\/$/;"	C
+ADC_SENSOR5_ADCON0	.\configuration_1559.h	/^#define ADC_SENSOR5_ADCON0          0b01010001  \/* AN20 *\/$/;"	C
+CONFIGURABLE_BASELINEGAIN	.\configuration.h	/^#define CONFIGURABLE_BASELINEGAIN$/;"	C
+CONFIGURABLE_BASELINERATE	.\configuration.h	/^#define CONFIGURABLE_BASELINERATE$/;"	C
+CONFIGURABLE_DEBOUNCE	.\configuration.h	/^#define CONFIGURABLE_DEBOUNCE$/;"	C
+CONFIGURABLE_DIFFRESULT	.\configuration.h	/^#define CONFIGURABLE_DIFFRESULT$/;"	C
+CONFIGURABLE_FILTERTYPE	.\configuration.h	/^#define CONFIGURABLE_FILTERTYPE$/;"	C
+CONFIGURABLE_GUARD	.\configuration.h	/^#define CONFIGURABLE_GUARD$/;"	C
+CONFIGURABLE_MOSTPRESSED	.\configuration.h	/^#define CONFIGURABLE_MOSTPRESSED$/;"	C
+CONFIGURABLE_NEGDELTACOUNTS	.\configuration.h	/^#define CONFIGURABLE_NEGDELTACOUNTS$/;"	C
+CONFIGURABLE_NOISETHRESH	.\configuration.h	/^#define CONFIGURABLE_NOISETHRESH$/;"	C
+CONFIGURABLE_NUMBERSAMPLES	.\configuration.h	/^#define CONFIGURABLE_NUMBERSAMPLES$/;"	C
+CONFIGURABLE_PRESSTIMEOUT	.\configuration.h	/^#define CONFIGURABLE_PRESSTIMEOUT$/;"	C
+CONFIGURABLE_READINGGAIN	.\configuration.h	/^#define CONFIGURABLE_READINGGAIN$/;"	C
+CONFIGURABLE_SAMPLETYPE	.\configuration.h	/^#define CONFIGURABLE_SAMPLETYPE$/;"	C
+CONFIGURABLE_SCANRATE_MIN	.\configuration.h	/^#define CONFIGURABLE_SCANRATE_MIN$/;"	C
+CONFIGURABLE_SINGLERESULT	.\configuration.h	/^#define CONFIGURABLE_SINGLERESULT$/;"	C
+COUNT_0	.\configuration.h	/^#define COUNT_0p5sec                    61$/;"	C
+CalibrateSensors	.\memory.c	/^void CalibrateSensors(uint8_t mask)$/;"	f
+DEBUG_UART	.\configuration.h	/^#define DEBUG_UART$/;"	C
+GetInterruptBit	.\memory.c	/^uint8_t GetInterruptBit(void)$/;"	f
+GetState	.\memory.c	/^uint8_t GetState(void)$/;"	f
+HAMMING_SCALER	.\configuration.h	/^#define HAMMING_SCALER                  ((float)16.50391)$/;"	C
+Hamming_Handler	.\mtouch_scan_1559.c	/^static void Hamming_Handler(uint8_t adc, uint8_t i)$/;"	f	file:
+I2C_BYTE_ADDR	.\i2c.c	/^#define I2C_BYTE_ADDR   ((uint8_t)0)$/;"	C
+I2C_CMD_WRITE	.\i2c.c	/^#define I2C_CMD_WRITE   ((uint8_t)0)$/;"	C
+I2C_ENABLED	.\configuration.h	/^#define I2C_ENABLED$/;"	C
+I2C_Init	.\i2c.c	/^void I2C_Init(void)$/;"	f
+I2C_Service	.\i2c.c	/^void I2C_Service(void)$/;"	f
+ID_MANUFACTURER	.\configuration.h	/^#define ID_MANUFACTURER             0xBD$/;"	C
+ID_PRODUCT	.\configuration.h	/^#define ID_PRODUCT                  0xFF$/;"	C
+ID_REVISION	.\configuration.h	/^#define ID_REVISION                 0x00$/;"	C
+ISR	.\main_1559.c	/^void interrupt ISR(void)$/;"	f
+LED0_TRIS	.\configuration_1559.h	/^#define LED0_TRIS                   (TRISCbits.TRISC2)$/;"	C
+LED1_TRIS	.\configuration_1559.h	/^#define LED1_TRIS                   (TRISCbits.TRISC3)$/;"	C
+LED2_TRIS	.\configuration_1559.h	/^#define LED2_TRIS                   (TRISCbits.TRISC7)$/;"	C
+LED3_TRIS	.\configuration_1559.h	/^#define LED3_TRIS                   (TRISCbits.TRISC5)$/;"	C
+LED4_TRIS	.\configuration_1559.h	/^#define LED4_TRIS                   (TRISAbits.TRISA1)$/;"	C
+LED5_TRIS	.\configuration_1559.h	/^#define LED5_TRIS                   (TRISAbits.TRISA0)$/;"	C
+MEMORY_Read	.\memory.c	/^uint8_t MEMORY_Read(uint8_t addr)$/;"	f
+MEMORY_Write	.\memory.c	/^void MEMORY_Write(uint8_t addr, uint8_t value)$/;"	f
+MTOUCH_ADCS	.\configuration_1559.h	/^#define MTOUCH_ADCS                 2           \/* Number of ADCs       *\/$/;"	C
+MTOUCH_ADDCAP_LIMIT_DONOTEDIT	.\configuration.h	/^#define MTOUCH_ADDCAP_LIMIT_DONOTEDIT   ((int24_t)1081584)$/;"	C
+MTOUCH_BASELINE_GAIN	.\configuration.h	/^#define MTOUCH_BASELINE_GAIN            4           \/* Additional filter gain applied to baselines *\/$/;"	C
+MTOUCH_BASELINE_RATE	.\configuration.h	/^#define MTOUCH_BASELINE_RATE            10          \/*  *\/$/;"	C
+MTOUCH_BASELINE_t	.\configuration.h	/^typedef uint32_t        MTOUCH_BASELINE_t;$/;"	t
+MTOUCH_BUTTON_THRESHOLD0	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD0    100$/;"	C
+MTOUCH_BUTTON_THRESHOLD1	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD1    100$/;"	C
+MTOUCH_BUTTON_THRESHOLD2	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD2    100$/;"	C
+MTOUCH_BUTTON_THRESHOLD3	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD3    100$/;"	C
+MTOUCH_BUTTON_THRESHOLD4	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD4    100$/;"	C
+MTOUCH_BUTTON_THRESHOLD5	.\configuration.h	/^#define MTOUCH_BUTTON_THRESHOLD5    100$/;"	C
+MTOUCH_Button_StateMachine	.\mtouch.c	/^static void MTOUCH_Button_StateMachine(uint8_t sensor)$/;"	f	file:
+MTOUCH_Button_State_Get	.\mtouch.c	/^enum MTOUCH_STATE MTOUCH_Button_State_Get(uint8_t sensor)$/;"	f
+MTOUCH_Button_State_Reset	.\mtouch.c	/^void MTOUCH_Button_State_Reset(uint8_t sensor)$/;"	f
+MTOUCH_CALLBACK_Matrix_NodePressed	.\output_1559.c	/^void MTOUCH_CALLBACK_Matrix_NodePressed (uint8_t node)  {}$/;"	f
+MTOUCH_CALLBACK_Matrix_NodeReleased	.\output_1559.c	/^void MTOUCH_CALLBACK_Matrix_NodeReleased(uint8_t node)  {}$/;"	f
+MTOUCH_CALLBACK_PressOccurred	.\output_1559.c	/^void MTOUCH_CALLBACK_PressOccurred(uint8_t sensor)$/;"	f
+MTOUCH_CALLBACK_ProxActivated	.\output_1559.c	/^void MTOUCH_CALLBACK_ProxActivated      (void)          {LED0_TRIS = TRIS_OUTPUT;}$/;"	f
+MTOUCH_CALLBACK_ProxDeactivated	.\output_1559.c	/^void MTOUCH_CALLBACK_ProxDeactivated    (void)          {LED0_TRIS = TRIS_INPUT;}$/;"	f
+MTOUCH_CALLBACK_ReleaseOccurred	.\output_1559.c	/^void MTOUCH_CALLBACK_ReleaseOccurred(uint8_t sensor)$/;"	f
+MTOUCH_CALLBACK_SliderUpdate	.\output_1559.c	/^void MTOUCH_CALLBACK_SliderUpdate       (void)$/;"	f
+MTOUCH_DEBOUNCE	.\configuration.h	/^#define MTOUCH_DEBOUNCE                 0$/;"	C
+MTOUCH_DELTA_MAX	.\configuration.h	/^#define MTOUCH_DELTA_MAX    ((MTOUCH_DELTA_t)INT8_MAX)$/;"	C
+MTOUCH_DELTA_MIN	.\configuration.h	/^#define MTOUCH_DELTA_MIN    ((MTOUCH_DELTA_t)INT8_MIN)$/;"	C
+MTOUCH_DELTA_SCALING	.\configuration.h	/^#define MTOUCH_DELTA_SCALING            9$/;"	C
+MTOUCH_DELTA_t	.\configuration.h	/^typedef int8_t              MTOUCH_DELTA_t;$/;"	t
+MTOUCH_Decode	.\mtouch.c	/^void MTOUCH_Decode(void)$/;"	f
+MTOUCH_FLAGS_t	.\mtouch.h	/^} MTOUCH_FLAGS_t;$/;"	t	typeref:struct:__anon1
+MTOUCH_Hamming	.\hamming.c	/^uint16_t MTOUCH_Hamming(uint8_t index, uint16_t value)$/;"	f
+MTOUCH_Init	.\mtouch.c	/^void MTOUCH_Init(void)$/;"	f
+MTOUCH_MATRIX_COL1	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_COL1          5$/;"	C
+MTOUCH_MATRIX_COL2	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_COL2          6$/;"	C
+MTOUCH_MATRIX_COL3	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_COL3          7$/;"	C
+MTOUCH_MATRIX_MASK_t	.\mtouch_matrix.h	/^typedef uint16_t        MTOUCH_MATRIX_MASK_t;$/;"	t
+MTOUCH_MATRIX_MASK_t	.\mtouch_matrix.h	/^typedef uint32_t        MTOUCH_MATRIX_MASK_t;$/;"	t
+MTOUCH_MATRIX_MASK_t	.\mtouch_matrix.h	/^typedef uint8_t         MTOUCH_MATRIX_MASK_t;$/;"	t
+MTOUCH_MATRIX_MASK_t	.\mtouch_matrix.h	/^typedef uint_least24_t  MTOUCH_MATRIX_MASK_t;$/;"	t
+MTOUCH_MATRIX_NODES	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_NODES         16$/;"	C
+MTOUCH_MATRIX_ROW1	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_ROW1          1$/;"	C
+MTOUCH_MATRIX_ROW2	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_ROW2          2$/;"	C
+MTOUCH_MATRIX_ROW3	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_ROW3          3$/;"	C
+MTOUCH_MATRIX_ROW4	.\mtouch_matrix.h	/^#define MTOUCH_MATRIX_ROW4          4$/;"	C
+MTOUCH_MEDIAN_FILTER_TAP	.\mtouch_proximity.h	/^#define MTOUCH_MEDIAN_FILTER_TAP            7$/;"	C
+MTOUCH_MOSTPRESSED_THRESHOLD	.\configuration.h	/^#define MTOUCH_MOSTPRESSED_THRESHOLD    10$/;"	C
+MTOUCH_Matrix_Decode	.\mtouch_matrix.c	/^void MTOUCH_Matrix_Decode(void)$/;"	f
+MTOUCH_Matrix_GetState	.\mtouch_matrix.c	/^MTOUCH_MATRIX_MASK_t MTOUCH_Matrix_GetState(void)$/;"	f
+MTOUCH_Matrix_Init	.\mtouch_matrix.c	/^void MTOUCH_Matrix_Init(void)$/;"	f
+MTOUCH_Matrix_SingleRowDecode	.\mtouch_matrix.c	/^static MTOUCH_MATRIX_MASK_t MTOUCH_Matrix_SingleRowDecode(void)$/;"	f	file:
+MTOUCH_Matrix_StateMachine	.\mtouch_matrix.c	/^static MTOUCH_MATRIX_MASK_t MTOUCH_Matrix_StateMachine(void)$/;"	f	file:
+MTOUCH_NEGATIVEDELTA_COUNTS	.\configuration.h	/^#define MTOUCH_NEGATIVEDELTA_COUNTS     32          \/*  *\/$/;"	C
+MTOUCH_NOISE_THRESHOLD	.\configuration.h	/^#define MTOUCH_NOISE_THRESHOLD      3$/;"	C
+MTOUCH_Notify_InterruptServiced	.\mtouch_scan_1559.c	/^void MTOUCH_Notify_InterruptServiced(void)$/;"	f
+MTOUCH_PRESSTIMEOUT_COUNTS	.\configuration.h	/^#define MTOUCH_PRESSTIMEOUT_COUNTS      10          \/* 0.5sec per count *\/$/;"	C
+MTOUCH_PROXIMITY	.\mtouch_proximity.h	/^#define MTOUCH_PROXIMITY                    0       \/* Index of the proximity sensor *\/$/;"	C
+MTOUCH_PROXIMITY_ENABLED	.\mtouch_proximity.h	/^#define MTOUCH_PROXIMITY_ENABLED$/;"	C
+MTOUCH_PROXIMITY_t	.\mtouch_proximity.h	/^typedef uint16_t       MTOUCH_PROXIMITY_t;$/;"	t
+MTOUCH_PROXIMITY_t	.\mtouch_proximity.h	/^typedef uint32_t       MTOUCH_PROXIMITY_t;$/;"	t
+MTOUCH_PROXIMITY_t	.\mtouch_proximity.h	/^typedef uint8_t        MTOUCH_PROXIMITY_t;$/;"	t
+MTOUCH_PROXIMITY_t	.\mtouch_proximity.h	/^typedef uint_least24_t MTOUCH_PROXIMITY_t;$/;"	t
+MTOUCH_PROX_ACTIVATE_THRESHOLD	.\mtouch_proximity.h	/^#define MTOUCH_PROX_ACTIVATE_THRESHOLD      100$/;"	C
+MTOUCH_PROX_GAIN	.\mtouch_proximity.h	/^#define MTOUCH_PROX_GAIN                    2$/;"	C
+MTOUCH_PROX_SCALING	.\mtouch_proximity.h	/^#define MTOUCH_PROX_SCALING                 6$/;"	C
+MTOUCH_Proximity_Decode	.\mtouch_proximity.c	/^void MTOUCH_Proximity_Decode(void)$/;"	f
+MTOUCH_Proximity_Delta	.\mtouch_proximity.c	/^static MTOUCH_DELTA_t      MTOUCH_Proximity_Delta;$/;"	v	file:
+MTOUCH_Proximity_Delta_Calculate	.\mtouch_proximity.c	/^void MTOUCH_Proximity_Delta_Calculate(void)$/;"	f
+MTOUCH_Proximity_Delta_Get	.\mtouch_proximity.c	/^MTOUCH_DELTA_t      MTOUCH_Proximity_Delta_Get  (void)$/;"	f
+MTOUCH_Proximity_Init	.\mtouch_proximity.c	/^void MTOUCH_Proximity_Init(void)$/;"	f
+MTOUCH_Proximity_StateMachine	.\mtouch_proximity.c	/^static void MTOUCH_Proximity_StateMachine(void)$/;"	f	file:
+MTOUCH_Proximity_State_Get	.\mtouch_proximity.c	/^enum MTOUCH_STATE MTOUCH_Proximity_State_Get(void)$/;"	f
+MTOUCH_Proximity_Update	.\mtouch_proximity.c	/^static void MTOUCH_Proximity_Update(void)$/;"	f	file:
+MTOUCH_RANDOM_BIT	.\mtouch_scan_1559.c	/^#define MTOUCH_RANDOM_BIT   8$/;"	C
+MTOUCH_RANDOM_XOR	.\mtouch_scan_1559.c	/^    #define MTOUCH_RANDOM_XOR   0xA1A1$/;"	C
+MTOUCH_RANDOM_XOR	.\mtouch_scan_1559.c	/^    #define MTOUCH_RANDOM_XOR   0xA6A6A6A6$/;"	C
+MTOUCH_RANDOM_XOR	.\mtouch_scan_1559.c	/^    #define MTOUCH_RANDOM_XOR   0xB4$/;"	C
+MTOUCH_RANDOM_XOR	.\mtouch_scan_1559.c	/^    #define MTOUCH_RANDOM_XOR   0xD7D7D7$/;"	C
+MTOUCH_RANDOM_t	.\mtouch_scan_1559.c	/^    typedef uint16_t MTOUCH_RANDOM_t;$/;"	t	file:
+MTOUCH_RANDOM_t	.\mtouch_scan_1559.c	/^    typedef uint32_t MTOUCH_RANDOM_t;$/;"	t	file:
+MTOUCH_RANDOM_t	.\mtouch_scan_1559.c	/^    typedef uint8_t MTOUCH_RANDOM_t;$/;"	t	file:
+MTOUCH_RANDOM_t	.\mtouch_scan_1559.c	/^    typedef uint_least24_t MTOUCH_RANDOM_t;$/;"	t	file:
+MTOUCH_READING_BITS	.\configuration.h	/^#define MTOUCH_READING_BITS         (MTOUCH_SAMPLE_BITS + MTOUCH_READING_GAIN)$/;"	C
+MTOUCH_READING_GAIN	.\configuration.h	/^#define MTOUCH_READING_GAIN             1           \/* Additional filter gain applied to readings *\/$/;"	C
+MTOUCH_READING_RISETIME	.\configuration.h	/^#define MTOUCH_READING_RISETIME 0$/;"	C
+MTOUCH_READING_RISETIME	.\configuration.h	/^#define MTOUCH_READING_RISETIME 17$/;"	C
+MTOUCH_READING_RISETIME	.\configuration.h	/^#define MTOUCH_READING_RISETIME 3$/;"	C
+MTOUCH_READING_RISETIME	.\configuration.h	/^#define MTOUCH_READING_RISETIME 8$/;"	C
+MTOUCH_READING_t	.\configuration.h	/^typedef uint16_t        MTOUCH_READING_t;$/;"	t
+MTOUCH_READING_t	.\configuration.h	/^typedef uint32_t        MTOUCH_READING_t;$/;"	t
+MTOUCH_READING_t	.\configuration.h	/^typedef uint_least24_t  MTOUCH_READING_t;$/;"	t
+MTOUCH_Random	.\mtouch_scan_1559.c	/^static uint8_t MTOUCH_Random(void)$/;"	f	file:
+MTOUCH_SAMPLES	.\configuration.h	/^#define MTOUCH_SAMPLES                  32          \/* Number of samples to take in one burst *\/$/;"	C
+MTOUCH_SAMPLE_BITS	.\configuration.h	/^#define MTOUCH_SAMPLE_BITS          (ADC_BITS + 1 + MTOUCH_SAMPLE_GAIN)$/;"	C
+MTOUCH_SAMPLE_GAIN	.\configuration.h	/^#define MTOUCH_SAMPLE_GAIN          4           \/* Based off 32-sample Hamming filter *\/$/;"	C
+MTOUCH_SAMPLE_t	.\configuration.h	/^typedef int16_t        MTOUCH_SAMPLE_t;$/;"	t
+MTOUCH_SAMPLE_t	.\configuration.h	/^typedef int32_t        MTOUCH_SAMPLE_t;$/;"	t
+MTOUCH_SAMPLE_t	.\configuration.h	/^typedef int_least24_t  MTOUCH_SAMPLE_t;$/;"	t
+MTOUCH_SENSORS	.\configuration_1559.h	/^#define MTOUCH_SENSORS              6           \/* Number of sensors    *\/$/;"	C
+MTOUCH_SLIDER_FILTER_GAIN	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_FILTER_GAIN           2$/;"	C
+MTOUCH_SLIDER_SENSOR0	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR0               8$/;"	C
+MTOUCH_SLIDER_SENSOR0_THRESHOLD	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR0_THRESHOLD     48$/;"	C
+MTOUCH_SLIDER_SENSOR1	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR1               9$/;"	C
+MTOUCH_SLIDER_SENSOR1_THRESHOLD	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR1_THRESHOLD     48$/;"	C
+MTOUCH_SLIDER_SENSOR2	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR2               10$/;"	C
+MTOUCH_SLIDER_SENSOR2_THRESHOLD	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSOR2_THRESHOLD     48$/;"	C
+MTOUCH_SLIDER_SENSORS	.\mtouch_slider3.h	/^#define MTOUCH_SLIDER_SENSORS               3$/;"	C
+MTOUCH_SLIDER_t	.\mtouch_slider3.h	/^    typedef uint8_t MTOUCH_SLIDER_t;$/;"	t
+MTOUCH_STATE	.\mtouch.h	/^enum MTOUCH_STATE$/;"	g
+MTOUCH_STATE_initializing	.\mtouch.h	/^    MTOUCH_STATE_initializing = 0,$/;"	e	enum:MTOUCH_STATE
+MTOUCH_STATE_pressed	.\mtouch.h	/^    MTOUCH_STATE_pressed$/;"	e	enum:MTOUCH_STATE
+MTOUCH_STATE_released	.\mtouch.h	/^    MTOUCH_STATE_released,$/;"	e	enum:MTOUCH_STATE
+MTOUCH_Scan	.\mtouch_scan_1559.c	/^void MTOUCH_Scan(void)$/;"	f
+MTOUCH_Scan_Init	.\mtouch_scan_1559.c	/^void MTOUCH_Scan_Init(void)$/;"	f
+MTOUCH_Scan_ResetCalibration	.\mtouch_scan_1559.c	/^void MTOUCH_Scan_ResetCalibration(uint8_t sensor)$/;"	f
+MTOUCH_Sensor_Baseline_Get	.\mtouch.c	/^MTOUCH_READING_t MTOUCH_Sensor_Baseline_Get(uint8_t sensor)$/;"	f
+MTOUCH_Sensor_Baseline_Update	.\mtouch.c	/^static void MTOUCH_Sensor_Baseline_Update(uint8_t sensor)$/;"	f	file:
+MTOUCH_Sensor_Delta_Calculate	.\mtouch.c	/^static void MTOUCH_Sensor_Delta_Calculate(uint8_t sensor)$/;"	f	file:
+MTOUCH_Sensor_Delta_Get	.\mtouch.c	/^MTOUCH_DELTA_t MTOUCH_Sensor_Delta_Get(uint8_t sensor)$/;"	f
+MTOUCH_Sensor_Reading_Get	.\mtouch.c	/^MTOUCH_READING_t MTOUCH_Sensor_Reading_Get(uint8_t sensor)$/;"	f
+MTOUCH_Service_Tick	.\mtouch.c	/^void MTOUCH_Service_Tick(void)$/;"	f
+MTOUCH_Slider_Decode	.\mtouch_slider3.c	/^void MTOUCH_Slider_Decode(void)$/;"	f
+MTOUCH_Slider_Decode_FarLeft	.\mtouch_slider3.c	/^static uint16_t MTOUCH_Slider_Decode_FarLeft(void)$/;"	f	file:
+MTOUCH_Slider_Decode_FarRight	.\mtouch_slider3.c	/^static uint16_t MTOUCH_Slider_Decode_FarRight(void)$/;"	f	file:
+MTOUCH_Slider_Decode_Left	.\mtouch_slider3.c	/^static uint16_t MTOUCH_Slider_Decode_Left(void)$/;"	f	file:
+MTOUCH_Slider_Decode_Right	.\mtouch_slider3.c	/^static uint16_t MTOUCH_Slider_Decode_Right(void)$/;"	f	file:
+MTOUCH_Slider_GetFiltered	.\mtouch_slider3.c	/^MTOUCH_SLIDER_t MTOUCH_Slider_GetFiltered(void)$/;"	f
+MTOUCH_Slider_GetRaw	.\mtouch_slider3.c	/^MTOUCH_SLIDER_t MTOUCH_Slider_GetRaw(void)$/;"	f
+MTOUCH_Slider_Init	.\mtouch_slider3.c	/^void MTOUCH_Slider_Init(void)$/;"	f
+MTOUCH_Slider_StateMachine	.\mtouch_slider3.c	/^static void MTOUCH_Slider_StateMachine(void)$/;"	f	file:
+MTOUCH_Slider_Update	.\mtouch_slider3.c	/^static void MTOUCH_Slider_Update(MTOUCH_SLIDER_t newValue)$/;"	f	file:
+MTOUCH_TIMEOUT	.\mtouch.h	/^enum MTOUCH_TIMEOUT$/;"	g
+MTOUCH_TIMEOUT_toggle	.\mtouch.h	/^    MTOUCH_TIMEOUT_toggle,$/;"	e	enum:MTOUCH_TIMEOUT
+MTOUCH_TIMEOUT_vdd	.\mtouch.h	/^    MTOUCH_TIMEOUT_vdd = 0,$/;"	e	enum:MTOUCH_TIMEOUT
+MTOUCH_TIMEOUT_vss	.\mtouch.h	/^    MTOUCH_TIMEOUT_vss$/;"	e	enum:MTOUCH_TIMEOUT
+MTOUCH_addcap	.\mtouch_scan_1559.c	/^        uint8_t                 MTOUCH_addcap                   [MTOUCH_SENSORS];$/;"	v
+MTOUCH_baseline	.\mtouch.c	/^static  MTOUCH_BASELINE_t   MTOUCH_baseline                 [MTOUCH_SENSORS];$/;"	v	file:
+MTOUCH_baselineGain	.\mtouch.c	/^        uint8_t             MTOUCH_baselineGain;$/;"	v
+MTOUCH_baselineRate	.\mtouch.c	/^        uint8_t             MTOUCH_baselineRate;$/;"	v
+MTOUCH_baseline_count	.\mtouch.c	/^static  uint8_t             MTOUCH_baseline_count           [MTOUCH_SENSORS];$/;"	v	file:
+MTOUCH_baseline_reset_count	.\mtouch.c	/^        RESET_COUNT_t       MTOUCH_baseline_reset_count     [MTOUCH_SENSORS];$/;"	v
+MTOUCH_button_debounce	.\mtouch.c	/^        uint8_t             MTOUCH_button_debounce          [MTOUCH_SENSORS];$/;"	v
+MTOUCH_button_state	.\mtouch.c	/^        enum MTOUCH_STATE   MTOUCH_button_state             [MTOUCH_SENSORS];$/;"	v	typeref:enum:MTOUCH_STATE
+MTOUCH_button_threshold	.\mtouch.c	/^        MTOUCH_DELTA_t      MTOUCH_button_threshold         [MTOUCH_SENSORS] =$/;"	v
+MTOUCH_calibrated	.\mtouch_scan_1559.c	/^static uint8_t                  MTOUCH_calibrated               [MTOUCH_SENSORS];$/;"	v	file:
+MTOUCH_capturedSamples	.\mtouch_scan_1559.c	/^static uint16_t                 MTOUCH_capturedSamples          [MTOUCH_ADCS][MTOUCH_SAMPLES+1];$/;"	v	file:
+MTOUCH_dataReady	.\mtouch_scan_1559.c	/^static uint8_t                  MTOUCH_dataReady;$/;"	v	file:
+MTOUCH_debounce	.\mtouch.c	/^        uint8_t             MTOUCH_debounce;$/;"	v
+MTOUCH_delta	.\mtouch.c	/^        MTOUCH_DELTA_t      MTOUCH_delta                    [MTOUCH_SENSORS];$/;"	v
+MTOUCH_delta_scaling	.\mtouch.c	/^        uint8_t             MTOUCH_delta_scaling            [MTOUCH_SENSORS];$/;"	v
+MTOUCH_diffResult	.\mtouch_scan_1559.c	/^       uint16_t                 MTOUCH_diffResult               [MTOUCH_SENSORS];$/;"	v
+MTOUCH_flags	.\mtouch_scan_1559.c	/^       MTOUCH_FLAGS_t           MTOUCH_flags;$/;"	v
+MTOUCH_frequency	.\mtouch_scan_1559.c	/^        uint8_t                 MTOUCH_frequency;$/;"	v
+MTOUCH_frequency_min	.\mtouch_scan_1559.c	/^        uint8_t                 MTOUCH_frequency_min;$/;"	v
+MTOUCH_lastSample	.\mtouch_scan_1559.c	/^       MTOUCH_SAMPLE_t          MTOUCH_lastSample               [MTOUCH_SENSORS];$/;"	v
+MTOUCH_matrix_state	.\mtouch_matrix.c	/^static MTOUCH_MATRIX_MASK_t MTOUCH_matrix_state;$/;"	v	file:
+MTOUCH_mostPressed_delta	.\mtouch.c	/^static  MTOUCH_DELTA_t      MTOUCH_mostPressed_delta;$/;"	v	file:
+MTOUCH_mostPressed_index	.\mtouch.c	/^static  uint8_t             MTOUCH_mostPressed_index;$/;"	v	file:
+MTOUCH_mostPressed_threshold	.\mtouch.c	/^        MTOUCH_DELTA_t      MTOUCH_mostPressed_threshold;$/;"	v
+MTOUCH_negDeltaCount	.\mtouch.c	/^        uint8_t             MTOUCH_negDeltaCount;$/;"	v
+MTOUCH_noise	.\mtouch_scan_1559.c	/^static uint24_t                 MTOUCH_noise                    [MTOUCH_ADCS];$/;"	v	file:
+MTOUCH_noise_threshold	.\mtouch_scan_1559.c	/^        int24_t                 MTOUCH_noise_threshold;$/;"	v
+MTOUCH_numberSamples	.\mtouch_scan_1559.c	/^         int8_t                 MTOUCH_numberSamples;$/;"	v
+MTOUCH_pressTimeout	.\mtouch.c	/^        uint8_t             MTOUCH_pressTimeout;$/;"	v
+MTOUCH_prox_baseline	.\mtouch_proximity.c	/^uint32_t             MTOUCH_prox_baseline;$/;"	v
+MTOUCH_prox_filter	.\mtouch_proximity.c	/^uint32_t             MTOUCH_prox_filter;$/;"	v
+MTOUCH_prox_reading	.\mtouch_proximity.c	/^uint32_t             MTOUCH_prox_reading;$/;"	v
+MTOUCH_prox_state	.\mtouch_proximity.c	/^static enum MTOUCH_STATE    MTOUCH_prox_state;$/;"	v	typeref:enum:MTOUCH_STATE	file:
+MTOUCH_proximity_scaling	.\mtouch_proximity.c	/^uint8_t              MTOUCH_proximity_scaling;    $/;"	v
+MTOUCH_proximity_threshold	.\mtouch_proximity.c	/^MTOUCH_DELTA_t       MTOUCH_proximity_threshold;$/;"	v
+MTOUCH_reading	.\mtouch.c	/^        MTOUCH_READING_t    MTOUCH_reading                  [MTOUCH_SENSORS];$/;"	v
+MTOUCH_readingCounter	.\mtouch_scan_1559.c	/^static uint8_t                  MTOUCH_readingCounter           [MTOUCH_SENSORS];$/;"	v	file:
+MTOUCH_readingGain	.\mtouch_scan_1559.c	/^        uint8_t                 MTOUCH_readingGain;$/;"	v
+MTOUCH_sample	.\mtouch_scan_1559.c	/^static MTOUCH_SAMPLE_t          MTOUCH_sample                   [MTOUCH_ADCS];$/;"	v	file:
+MTOUCH_sampleCounter	.\mtouch_scan_1559.c	/^static  int8_t                  MTOUCH_sampleCounter;$/;"	v	file:
+MTOUCH_singleResult	.\mtouch_scan_1559.c	/^       uint16_t                 MTOUCH_singleResult             [MTOUCH_SENSORS];$/;"	v
+MTOUCH_slider	.\mtouch_slider3.c	/^static MTOUCH_SLIDER_t MTOUCH_slider;$/;"	v	file:
+MTOUCH_slider_filter	.\mtouch_slider3.c	/^static uint16_t        MTOUCH_slider_filter;$/;"	v	file:
+MTOUCH_slider_sensorDelta	.\mtouch_slider3.c	/^static uint8_t         MTOUCH_slider_sensorDelta   [MTOUCH_SLIDER_SENSORS];$/;"	v	file:
+Noise_Calculation	.\mtouch_scan_1559.c	/^static void Noise_Calculation(uint8_t adc)$/;"	f	file:
+Noise_Check	.\mtouch_scan_1559.c	/^static uint8_t Noise_Check(uint8_t adc, uint8_t sensor)$/;"	f	file:
+READ_BASELINE	.\memory.c	/^        #define READ_BASELINE(addr,sensor)                                                        \\$/;"	C
+READ_DIFFRESULT	.\memory.c	/^        #define READ_DIFFRESULT(addr,sensor)                                             \\$/;"	C
+READ_READING	.\memory.c	/^        #define READ_READING(addr,sensor)                                                        \\$/;"	C
+READ_SAMPLE	.\memory.c	/^        #define READ_SAMPLE(addr,sensor)                                                 \\$/;"	C
+READ_SINGLERESULT	.\memory.c	/^        #define READ_SINGLERESULT(addr,sensor)                                             \\$/;"	C
+RESET_COUNT_t	.\mtouch.c	/^typedef uint16_t            RESET_COUNT_t;$/;"	t	file:
+SCAN_HANDLER_STATUS	.\mtouch_scan_1559.c	/^enum SCAN_HANDLER_STATUS$/;"	g	file:
+SCAN_HANDLER_error	.\mtouch_scan_1559.c	/^    SCAN_HANDLER_error$/;"	e	enum:SCAN_HANDLER_STATUS	file:
+SCAN_HANDLER_good	.\mtouch_scan_1559.c	/^    SCAN_HANDLER_good = 0,$/;"	e	enum:SCAN_HANDLER_STATUS	file:
+SYSTEM_Init	.\main_1559.c	/^void SYSTEM_Init(void)$/;"	f
+Sample	.\mtouch_scan_1559.c	/^static void Sample(uint8_t sensor1, uint8_t sensor2)$/;"	f	file:
+Sample_Handler	.\mtouch_scan_1559.c	/^static uint8_t Sample_Handler(uint8_t adc, uint8_t sensor)$/;"	f	file:
+Scan_Handler	.\mtouch_scan_1559.c	/^static enum SCAN_HANDLER_STATUS Scan_Handler(uint8_t sensor1, uint8_t sensor2)$/;"	f	file:
+TMR_FREQ_INCR0	.\configuration.h	/^#define TMR_FREQ_INCR0              ((uint8_t)1)$/;"	C
+TMR_FREQ_INCR1	.\configuration.h	/^#define TMR_FREQ_INCR1              ((uint8_t)3)$/;"	C
+TMR_FREQ_INCR2	.\configuration.h	/^#define TMR_FREQ_INCR2              ((uint8_t)4)$/;"	C
+TMR_FREQ_INCR3	.\configuration.h	/^#define TMR_FREQ_INCR3              ((uint8_t)7)$/;"	C
+TMR_FREQ_MAX	.\configuration.h	/^#define TMR_FREQ_MAX                ((uint8_t)UINT8_MAX)$/;"	C
+TMR_FREQ_MIN	.\configuration.h	/^#define TMR_FREQ_MIN                ((uint8_t)170)  \/* The most important value to get right. This must be set so the minimum timer value is longer than the ISR service time. *\/$/;"	C
+TMR_FREQ_MIN_MAX	.\configuration.h	/^#define TMR_FREQ_MIN_MAX            ((uint8_t)240)$/;"	C
+TRIS_INPUT	.\output_1559.c	/^#define TRIS_INPUT  ((uint8_t)1)$/;"	C
+TRIS_OUTPUT	.\output_1559.c	/^#define TRIS_OUTPUT ((uint8_t)0)$/;"	C
+TXCON_MAX	.\configuration.h	/^#define TXCON_MAX                   ((uint8_t)0x03)$/;"	C
+UART_DELIMITER	.\uart.h	/^#define UART_DELIMITER  ('\\t')$/;"	C
+UART_ENABLED	.\configuration.h	/^#define UART_ENABLED$/;"	C
+UART_HexToBinary	.\uart.c	/^uint8_t UART_HexToBinary(uint8_t* data)$/;"	f
+UART_Init	.\uart.c	/^void UART_Init(void)$/;"	f
+UART_NACK	.\uart.h	/^#define UART_NACK       ('\\x15')$/;"	C
+UART_OUTPUT_NIBBLE	.\uart.c	/^#define UART_OUTPUT_NIBBLE(value, shift)                            \\$/;"	C
+UART_PutChar	.\uart.c	/^void UART_PutChar(uint8_t value)$/;"	f
+UART_Receive_Service	.\uart.c	/^void UART_Receive_Service(void)$/;"	f
+UART_STATES	.\uart.c	/^enum UART_STATES$/;"	g	file:
+UART_STATE_idle	.\uart.c	/^    UART_STATE_idle = 0,$/;"	e	enum:UART_STATES	file:
+UART_STATE_read	.\uart.c	/^    UART_STATE_read,$/;"	e	enum:UART_STATES	file:
+UART_STATE_write	.\uart.c	/^    UART_STATE_write$/;"	e	enum:UART_STATES	file:
+UART_SendChar	.\uart.c	/^void UART_SendChar(uint8_t value)$/;"	f
+UART_SendChar_Hex	.\uart.c	/^void UART_SendChar_Hex(uint8_t value)$/;"	f
+UART_SendInt	.\uart.c	/^void UART_SendInt(uint16_t value)$/;"	f
+UART_SendLong	.\uart.c	/^void UART_SendLong(uint32_t value)$/;"	f
+UART_SendNewLine	.\uart.c	/^void UART_SendNewLine(void)$/;"	f
+UART_SendShortLong	.\uart.c	/^void UART_SendShortLong(uint24_t value)$/;"	f
+UART_SendSignedChar	.\uart.c	/^void UART_SendSignedChar(int8_t value)$/;"	f
+UART_SendSignedInt	.\uart.c	/^void UART_SendSignedInt(int16_t value)$/;"	f
+UART_SendSignedLong	.\uart.c	/^void UART_SendSignedLong(int32_t value)$/;"	f
+UART_SendSignedShortLong	.\uart.c	/^void UART_SendSignedShortLong(int24_t value)$/;"	f
+__MTOUCH_MATRIX_H	.\mtouch_matrix.h	/^#define __MTOUCH_MATRIX_H$/;"	C
+__MTOUCH_PROXIMITY_H	.\mtouch_proximity.h	/^#define __MTOUCH_PROXIMITY_H$/;"	C
+__MTOUCH_SLIDER3_H	.\mtouch_slider3.h	/^#define __MTOUCH_SLIDER3_H$/;"	C
+active_nJitter	.\mtouch.h	/^    unsigned active_nJitter:1;$/;"	m	struct:__anon1
+bank	.\memory.c	/^uint8_t bank = 0;$/;"	v
+check	.\mtouch.h	/^    unsigned check:1;$/;"	m	struct:__anon1
+done	.\mtouch.h	/^    unsigned done:1;$/;"	m	struct:__anon1
+error	.\mtouch.h	/^    unsigned error:1;$/;"	m	struct:__anon1
+filter_data	.\mtouch_proximity.c	/^static uint32_t             filter_data[MTOUCH_MEDIAN_FILTER_TAP];$/;"	v	file:
+guard	.\mtouch.h	/^    unsigned guard:1;$/;"	m	struct:__anon1
+hamming_nAccumulation	.\mtouch.h	/^    unsigned hamming_nAccumulation:1;$/;"	m	struct:__anon1
+main	.\main_1559.c	/^void main(void)$/;"	f
+median_filter	.\mtouch_proximity.c	/^static uint32_t median_filter(uint32_t new_data)$/;"	f	file:
+mostPressed	.\mtouch.h	/^    unsigned mostPressed:1;$/;"	m	struct:__anon1
+tap_index	.\mtouch_proximity.c	/^static uint8_t              tap_index[MTOUCH_MEDIAN_FILTER_TAP];$/;"	v	file:

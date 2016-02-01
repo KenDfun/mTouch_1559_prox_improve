@@ -41,7 +41,8 @@ enum MTOUCH_STATE
 {
     MTOUCH_STATE_initializing = 0,
     MTOUCH_STATE_released,
-    MTOUCH_STATE_pressed
+    MTOUCH_STATE_pressed,
+    MTOUCH_STATE_noise
 };
 
 typedef struct
@@ -119,4 +120,3 @@ void MTOUCH_CALLBACK_PressOccurred(uint8_t sensor);
 void MTOUCH_CALLBACK_ReleaseOccurred(uint8_t sensor);
 
 #endif	/* ADC_H */
-

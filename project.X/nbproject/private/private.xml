@@ -3,6 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/configuration.h</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/mtouch_proximity.c</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/memory.c</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/mtouch_scan_1559.c</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/uart.h</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/mtouch.c</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/main_1559.c</file>
+            <file>file:/C:/Microchip/src/mTouch/mTouch_1559_prox_improve/uart.c</file>
+        </group>
     </open-files>
 </project-private>

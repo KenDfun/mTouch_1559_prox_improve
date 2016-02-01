@@ -116,7 +116,7 @@ static void             MTOUCH_Sensor_Delta_Calculate   (uint8_t sensor);
 void MTOUCH_Init(void)
 {
     uint8_t i;
-    
+
     for (i = (uint8_t)0; i < (uint8_t)MTOUCH_SENSORS; i++)
     {
         MTOUCH_button_state [i] = MTOUCH_STATE_initializing;
@@ -139,7 +139,7 @@ void MTOUCH_Init(void)
     #if defined(CONFIGURABLE_DEBOUNCE)
     MTOUCH_debounce = MTOUCH_DEBOUNCE;
     #endif
-    
+
     MTOUCH_Scan_Init();
 
     #if defined(MTOUCH_PROXIMITY_ENABLED)
@@ -295,12 +295,16 @@ MTOUCH_DELTA_t MTOUCH_Sensor_Delta_Get(uint8_t sensor)
     return MTOUCH_delta[sensor];
 }
 
+int32_t Debug_delta=3;
+
 static void MTOUCH_Sensor_Delta_Calculate(uint8_t sensor)
 {
     int32_t delta;
     uint8_t i;
 
     delta = (int32_t)((int32_t)(MTOUCH_Sensor_Reading_Get(sensor)) - (int32_t)(MTOUCH_Sensor_Baseline_Get(sensor)));
+
+    if(sensor==0)Debug_delta = delta;
 
     for (i = MTOUCH_delta_scaling[sensor]; i > 0; i--)
     {
@@ -427,7 +431,7 @@ static void MTOUCH_Button_StateMachine(uint8_t sensor)
                 if (MTOUCH_button_debounce[sensor] == MTOUCH_debounce)
                 #else
                 if (MTOUCH_button_debounce[sensor] == MTOUCH_DEBOUNCE)
-                #endif         
+                #endif
                 {
                     MTOUCH_button_state[sensor] = MTOUCH_STATE_released;
                     MTOUCH_button_debounce[sensor] = 0;
