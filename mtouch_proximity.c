@@ -55,7 +55,7 @@ extern void MTOUCH_CALLBACK_ProxActivated   (void);
 extern void MTOUCH_CALLBACK_ProxDeactivated (void);
 
 MTOUCH_DELTA_t       MTOUCH_proximity_threshold;
-MTOUCH_DELTA_t       MTOUCH_proximity_noise_threshold;
+//MTOUCH_DELTA_t       MTOUCH_proximity_noise_threshold;
 uint8_t              MTOUCH_proximity_scaling;
 
 /* Local Prototypes */
@@ -77,7 +77,7 @@ void MTOUCH_Proximity_Init(void)
     MTOUCH_prox_filter      = (uint32_t)0;
     MTOUCH_prox_state       = MTOUCH_STATE_released;
     MTOUCH_proximity_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_ACTIVATE_THRESHOLD;
-    MTOUCH_proximity_noise_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_NOISE_THRESHOLD;
+  //  MTOUCH_proximity_noise_threshold = (MTOUCH_DELTA_t)MTOUCH_PROX_NOISE_THRESHOLD;
     MTOUCH_proximity_scaling = (uint8_t)MTOUCH_PROX_SCALING;
 
     /*Initialize Median filter*/
